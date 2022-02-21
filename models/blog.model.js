@@ -1,12 +1,15 @@
 //Require Mongoose
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+const Author = require('../models/author.model')
 
-//Define a schema
-const blog_schema = mongoose.Schema;
-
-const blog = new blog_schema({
+const Blog = mongoose.model('Blog', new mongoose.Schema({
   title: String,
-  body: String,
+  content: String,
+  author: [
+      {type: Schema.Types.ObjectId, ref: 'Author'}
+    ],
+
   created: {
         type: Date,
         default: Date.now
@@ -15,7 +18,7 @@ const blog = new blog_schema({
         type: Date,
         default: Date.now
   }, 
-});
+}))
 
-module.exports = blog;
+module.exports = Blog
 
