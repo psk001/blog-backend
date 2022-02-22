@@ -2,9 +2,13 @@ const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
 const bodyParser = require("body-parser");
-
-app.use(bodyParser.json());
+const config = require('config')
 const port = 3000
+
+// if (! config.get('jwtPrivateKey')){
+//     console.error('jwt private key not defined...')
+//     process.exit(1)
+// }
 
 // routes
 const home_route = require('./routes/home.route')
@@ -12,6 +16,9 @@ const blog_route = require('./routes/blog.route')
 const author_route = require('./routes/author.route')
 const user_route = require('./routes/user.route')
 const auth_route = require('./routes/auth')
+
+// 
+app.use(bodyParser.json());
 
 // routes connection
 app.use('/', home_route)
