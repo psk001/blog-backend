@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const auth = require('../middleware/auth.mw')
  
 // require blog model
 const Blog = require('../models/blog.model')
@@ -13,7 +14,7 @@ router.get('/', async (req, res) => {
 
 
 // post route
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
     let blog = new Blog({
         title: req.body.title,
         content: req.body.content,
