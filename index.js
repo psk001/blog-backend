@@ -10,11 +10,15 @@ const port = 3000
 const home_route = require('./routes/home.route')
 const blog_route = require('./routes/blog.route')
 const author_route = require('./routes/author.route')
+const user_route = require('./routes/user.route')
+const auth_route = require('./routes/auth')
 
 // routes connection
 app.use('/', home_route)
 app.use('/api/blogs', blog_route)
 app.use('/api/authors', author_route)
+app.use('/api/users', user_route)
+app.use('/api/auth', auth_route)
 
 
 // connecting to database
