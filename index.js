@@ -15,6 +15,8 @@ const port = 3000
 //     process.exit(1)
 // }
 
+// for production
+require('./startup/prod')
 
 // logging errors 
 winston.add(winston.transports.File, {filename: 'logfile.log'})
