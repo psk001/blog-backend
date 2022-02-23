@@ -10,7 +10,7 @@ const Blog = require('../models/blog.model')
 
 // get route 
 router.get('/', async (req, res) => {
-    throw new Error ('could not get blogs')
+    //throw new Error ('could not get blogs')
     const blogs = await Blog.find()
     res.send(blogs)
     
