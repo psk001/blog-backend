@@ -1,6 +1,6 @@
 require('express-async-errors') // used to remove asyncMW 
-const winston = require('winston')
-require('winston-mongodb')
+//const winston = require('winston')
+//require('winston-mongodb')
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
