@@ -19,8 +19,8 @@ const port = 3000
 require('./startup/prod')
 
 // logging errors 
-winston.add(winston.transports.File, {filename: 'logfile.log'})
-winston.add(winston.transports.MongoDB, {db: 'mongodb://localhost/blogproject'})
+// winston.add(winston.transports.File, {filename: 'logfile.log'})
+// winston.add(winston.transports.MongoDB, {db: 'mongodb://localhost/blogproject'})
 
 // routes
 const home_route = require('./routes/home.route')
