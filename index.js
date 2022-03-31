@@ -40,7 +40,7 @@ app.use('/api/users', user_route)
 app.use('/api/auth', auth_route)
 
 // error handling middleware
-app.use(error)
+// app.use(error)
 
 // connecting to database
 mongoose.connect('mongodb://localhost/blogproject')

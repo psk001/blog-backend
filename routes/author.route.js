@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
     const authors = await Author.find()
     res.send(authors)
 })
-
+ 
 
 router.post('/', async (req, res) => {
     let author = new Author({

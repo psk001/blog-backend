@@ -12,14 +12,14 @@ const Blog = require('../models/blog.model')
 router.get('/', async (req, res) => {
     //throw new Error ('could not get blogs')
     const blogs = await Blog.find()
-    res.send(blogs)
-    
+    res.send(blogs) 
 })
 
-
+//  admin,
 // post route
-router.post('/', auth, admin, asyncMW(async (req, res) => {
- 
+
+router.post('/', auth, asyncMW(async (req, res) => {
+   
     let blog = new Blog({
         title: req.body.title,
         content: req.body.content,
@@ -28,7 +28,7 @@ router.post('/', auth, admin, asyncMW(async (req, res) => {
 
     blog = await blog.save()
 
-    res.send(blog)
+    res.status(200).send('successfuly saved your blog')
 }))
 
 // exports

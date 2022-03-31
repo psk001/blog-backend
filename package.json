@@ -3,22 +3,24 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "engines": {
     "node": "16.14.0"
   },
   "dependencies": {
+    "@types/joi": "^17.2.3",
     "bcrypt": "^5.0.1",
     "compression": "^1.7.4",
     "config": "^3.3.7",
     "express": "^4.17.2",
     "express-async-errors": "^2.1.0",
     "helmet": "^5.0.2",
-    "joi": "^14.3.1",
+    "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
     "mongoose": "^6.2.1",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "winston": "^3.6.0"
   }
 }
